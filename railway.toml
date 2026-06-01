@@ -1,0 +1,7 @@
+# Railway configuration for Laravel
+
+[build]
+builder = "heroku"
+
+[processes]
+web = "vendor/bin/heroku-php-apache2 public/"
