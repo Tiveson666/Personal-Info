@@ -1,22 +1,11 @@
-# Railway deployment configuration
+[build]
+cmd = "composer install --no-dev && npm install && npm run build"
 
-# Build command
-build:
-  cmd: composer install && npm install && npm run build
+[start]
+cmd = "php artisan serve --host=0.0.0.0 --port=${PORT:-8000}"
 
-# Start command  
-start: php artisan serve --host=0.0.0.0 --port=${PORT:-8000}
-
-# Environment variables (set in Railway dashboard)
-# APP_NAME=Portfolio
-# APP_ENV=production  
-# APP_KEY=base64:xxxxx
-# APP_DEBUG=false
-# APP_URL=https://yourapp.railway.app
-# LOG_LEVEL=error
-# DB_CONNECTION=postgresql
-# DB_HOST=${{Postgres.PGHOST}}
-# DB_PORT=5432
-# DB_DATABASE=${{Postgres.PGDATABASE}}
-# DB_USERNAME=${{Postgres.PGUSER}}
-# DB_PASSWORD=${{Postgres.PGPASSWORD}}
+[env]
+APP_ENV = "production"
+APP_DEBUG = "false"
+LOG_LEVEL = "error"
+LOG_CHANNEL = "stack"
