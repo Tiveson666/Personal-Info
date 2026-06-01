@@ -1,5 +1,2 @@
 [build]
-builder = "heroku"
-
-[processes]
-web = "vendor/bin/heroku-php-apache2 public/"
+dockerfile = "Dockerfile"
