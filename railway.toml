@@ -1,5 +1,3 @@
-# Railway configuration for Laravel
-
 [build]
 builder = "heroku"
 
